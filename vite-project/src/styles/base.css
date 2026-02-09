@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mono);
+  color: var(--text-0);
+  background:
+    radial-gradient(1200px 800px at 12% 10%, rgba(33, 255, 154, 0.18), transparent 58%),
+    radial-gradient(1000px 700px at 90% 18%, rgba(0, 229, 255, 0.14), transparent 55%),
+    radial-gradient(900px 600px at 65% 92%, rgba(255, 59, 106, 0.10), transparent 50%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100%;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: rgba(33, 255, 154, 0.28);
+  color: var(--text-0);
+}
