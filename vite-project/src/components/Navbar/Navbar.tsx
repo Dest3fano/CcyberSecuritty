@@ -1,6 +1,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 
 import LogoMark from '../Logo/LogoMark'
+import { GitHubIcon, DownloadIcon } from '../Icons/Icons'
 
 type NavItem = {
   label: string
@@ -73,8 +74,11 @@ export default function Navbar() {
         </nav>
 
         <div className="nav__right">
-          <a className="nav__cta" href="#signin">
-            Sign in
+          <a className="nav__icon" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <GitHubIcon className="nav__iconSvg" width="22" height="22" />
+          </a>
+          <a className="nav__icon" href="#resume" aria-label="Download Resume">
+            <DownloadIcon className="nav__iconSvg" width="22" height="22" />
           </a>
 
           <button
@@ -129,9 +133,16 @@ export default function Navbar() {
             </div>
 
             <div className="nav__panelFooter">
-              <a className="nav__panelCta" href="#signin" onClick={close}>
-                Sign in
-              </a>
+              <div className="nav__panelIcons">
+                <a className="nav__panelIcon" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" onClick={close}>
+                  <GitHubIcon width="24" height="24" />
+                  <span>GitHub</span>
+                </a>
+                <a className="nav__panelIcon" href="#resume" aria-label="Download Resume" onClick={close}>
+                  <DownloadIcon width="24" height="24" />
+                  <span>Download Resume</span>
+                </a>
+              </div>
               <a className="nav__panelSecondary" href="#contact" onClick={close}>
                 Contact
               </a>
